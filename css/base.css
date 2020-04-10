@@ -1,0 +1,656 @@
+/* CSS Document */
+body, div, dl, dt, dd, ul, li, ol, h1, h2, h3, h4, h5, h6, p, input, span, a, img, b, table, tr, th, td, tbody, form, fiedset, pre, textarea, blockquote {
+  margin: 0;
+  padding: 0;
+  border: none 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #000;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: -apple-system,"PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  /*font-weight:normal*/
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+input, button, select, textarea {
+  outline: none;
+  font-family: "Microsoft YaHei";
+  background: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+.fixed-pad {
+  padding-bottom: 1.28rem;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.public-title {
+  height: .8rem;
+  padding: .3rem .3rem 0;
+  line-height: .8rem;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.public-title h2 {
+  font-size: .4rem;
+  color: #333;
+}
+
+.public-title h2 a {
+  display: block;
+  color: #333;
+}
+
+.course-item {
+  width: 100%;
+}
+
+.course-item a {
+  display: block;
+}
+
+.course-item .course-contain-info {
+  max-height: .68rem;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-left;
+  -moz-justify-content: flex-left;
+  -ms-justify-content: flex-left;
+  -o-justify-content: flex-left;
+  justify-content: flex-left;
+  flex-wrap: wrap;
+  color: #999;
+  font-size: .22rem;
+  line-height: .34rem;
+  margin-bottom: .2rem;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.course-item .course-contain-info span {
+  margin-right: .2rem;
+}
+
+.course-item .course-extra-info {
+  padding-right: 2rem;
+}
+
+.course-item .course-price {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.course-contain-info .broadcast-time {
+  color: #2e88fe;
+}
+
+.course-name {
+  max-height: 1.08rem;
+  margin-bottom: .1rem;
+  overflow: hidden;
+}
+
+.course-name .course-title {
+  font-size: .34rem;
+  color: #333;
+  line-height: .54rem;
+}
+
+.course-name .course-title span {
+  color: #2e88fe;
+}
+
+.course-name .course-label {
+  float: left;
+  padding-top: .08rem;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.course-name .course-label span {
+  width: .38rem;
+  height: .38rem;
+  font-size: .24rem;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  line-height: .38rem;
+  margin-right: .1rem;
+}
+
+.course-name .discount-label {
+  background: #fd7a33;
+}
+
+.course-name .reduction-label {
+  background: #ff2e74;
+}
+
+.course-name .audition-label {
+  background: #2e88fe;
+}
+
+.course-extra-info {
+  position: relative;
+  height: 1rem;
+}
+
+.course-extra-info .course-lecturer {
+  width: 100%;
+  height: 1rem;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: .2rem;
+  color: #999;
+  overflow: hidden;
+}
+
+.course-extra-info .course-lecturer .teacher-item {
+  width: 1.2rem;
+  height: 100%;
+  text-align: center;
+  line-height: .44rem;
+  white-space: nowrap;
+}
+
+.course-extra-info .course-lecturer img {
+  width: .56rem;
+  height: .56rem;
+  border-radius: .28rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.course-extra-info .course-price {
+  position: absolute;
+  right: 0;
+  bottom: .06rem;
+  text-align: right;
+  white-space: nowrap;
+  line-height: .42rem;
+}
+
+.course-extra-info .course-price .cour-original-price {
+  font-size: .3rem;
+  color: #999;
+  margin-right: .1rem;
+}
+
+.course-extra-info .course-price .discount-price {
+  font-size: .4rem;
+  color: #fd7a33;
+  font-weight: bold;
+}
+
+.no-content {
+  padding: .2rem .3rem;
+  background: #f1f4fd;
+  text-align: center;
+  font-size: .28rem;
+  color: #999;
+  background: #f1f4fd;
+}
+
+.footer {
+  padding: .3rem .2rem;
+  font-size: .22rem;
+  color: #bbb;
+  text-align: center;
+  line-height: .36rem;
+  background: #f1f4fd;
+}
+
+.footer-pad {
+  padding: .3rem .2rem 1.58rem;
+}
+
+.bottom-menu .ind-bot-menu .close-ind-bot, .open-ind-bot {
+  right: .3rem;
+  bottom: 1.1rem;
+  width: .88rem;
+  height: .88rem;
+  line-height: .88rem;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 11;
+}
+
+.bottom-menu .ind-bot-menu .close-ind-bot img, .open-ind-bot img {
+  width: .47rem;
+  height: .47rem;
+  padding-top: .17rem;
+  margin: 0 auto;
+}
+
+.bottom-menu {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.28rem;
+  z-index: 10;
+}
+
+.bottom-menu .ind-bot-menu {
+  position: relative;
+  max-width: 750px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  font-size: .26rem;
+  color: #666;
+  margin: 0 auto;
+}
+
+.bottom-menu .ind-bot-menu .close-ind-bot {
+  position: absolute;
+}
+
+.bottom-menu .bot-menu-icon {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+
+.bottom-menu .bot-menu-icon li {
+  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  text-align: center;
+}
+
+.bottom-menu .bot-menu-icon li a {
+  display: block;
+  padding: .24rem 0 0;
+  color: #666;
+}
+
+.bottom-menu .bot-menu-icon li a span {
+  white-space: nowrap;
+}
+
+.bottom-menu .bot-menu-icon img {
+  height: .44rem;
+  margin: 0 auto .06rem;
+}
+
+.open-ind-bot {
+  position: fixed;
+  display: none;
+}
+
+.top-search {
+  position: relative;
+  height: .76rem;
+  padding: .15rem .3rem .15rem .9rem;
+  background: #fff;
+}
+
+.top-search .search-form {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.top-search .search-ipt {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 .2rem;
+  background: #f5f5f5;
+  font-size: .3rem;
+  line-height: .76rem;
+  color: #333;
+  border-radius: .06rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.go-back {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: .9rem;
+  height: .76rem;
+  margin-top: -.38rem;
+  background: url(../images/go-back.png) 0.3rem center no-repeat;
+  background-size: .2rem .4rem;
+}
+
+.search-hotcourse {
+  padding-left: .3rem;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.search-hotcourse .search-cour-item {
+  padding: 0 .25rem;
+  height: .6rem;
+  line-height: .6rem;
+  background: #eee;
+  font-size: .26rem;
+  color: #666;
+  border-radius: .06rem;
+  margin: 0 .3rem .3rem 0;
+}
+
+.search-filter .filter-list, .search-filter .filter-price {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: .3rem;
+  color: #999;
+}
+
+.search-filter .current.filter-list, .search-filter .current.filter-price {
+  color: #2e88fe;
+  font-weight: bold;
+  font-size: .32rem;
+}
+
+.search-filter {
+  height: .9rem;
+  line-height: .9rem;
+  border-top: 1px solid #f1f4fd;
+  box-sizing: border-box;
+  padding: 0 .5rem 0 0;
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #f1f4fd;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: stretch;
+}
+
+.search-filter .filter-price {
+  text-align: center;
+}
+
+.list-course-item {
+  padding: .3rem;
+  border-top: .2rem solid #f1f4fd;
+}
+
+.no-result {
+  padding: 3rem .3rem 0;
+  font-size: .32rem;
+  color: #999;
+  text-align: center;
+}
+
+.no-result img {
+  width: 3.7rem;
+  margin: 0 auto .3rem;
+}
+
+.no-result .back-home-page {
+  display: block;
+  width: 2.76rem;
+  height: .7rem;
+  line-height: .7rem;
+  border-radius: .35rem;
+  background: #2e88fe;
+  color: #fff;
+  text-align: center;
+  font-size: .32rem;
+  margin: .3rem auto 0;
+}
+
+.mescroll-upwarp {
+  font-size: 0.3rem;
+  color: #666;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+.public-headline {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.public-headline .public-topname {
+  height: 1rem;
+  padding: 0  .9rem;
+  font-size: .38rem;
+  overflow: hidden;
+}
+
+.nav-subject-swiper {
+  height: .9rem;
+  line-height: .9rem;
+  border-top: 1px solid #f1f4fd;
+  border-bottom: 1px solid #f1f4fd;
+  font-size: .3rem;
+  color: #999;
+  overflow: hidden;
+}
+
+.nav-subject-swiper .swiper-slide {
+  width: auto;
+}
+
+.nav-subject-swiper .swiper-slide span {
+  display: block;
+  padding: 0 .3rem;
+}
+
+.nav-subject-swiper .swiper-slide span.current {
+  color: #2e88fe;
+  font-weight: bold;
+  font-size: .32rem;
+}
+
+.fixed-top {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.scroll-nav {
+  background: #fff;
+}
+
+.mescroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 1.9rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.mescroll-wrapper {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.price-default {
+  padding-right: .3rem;
+  background: url(../images/price-icon.png) right center no-repeat;
+  background-size: .23rem .28rem;
+}
+
+.price-default.price-rise {
+  background: url(../images/price-icon-rise.png) right center no-repeat;
+  background-size: .23rem .28rem;
+}
+
+.price-default.price-drop {
+  background: url(../images/price-icon-drop.png) right center no-repeat;
+  background-size: .23rem .28rem;
+}
+
+.searchHot-title {
+  height: .8rem;
+  padding: .3rem .3rem 0;
+  line-height: .8rem;
+}
+
+.searchHot-title h2 {
+  font-size: .26rem;
+}

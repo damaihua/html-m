@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>课程详情页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/course.css">
+  <script src="js/fontREM.js"></script>
+  <script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/course.js"></script>
+  <script>
+  $(function(){
+    $('.course-cover-con,.course-lesson .course-audition').on('click',function(){
+      var src=$(this).attr('data-src');
+      $('.course-cover-con').hide();
+      $('.video-play').empty();
+      console.log(src)
+      $('.video-play').append('<script src="'+src+'"><script>');
+      $('.play-content').css({'height':'auto'});
+      $('body,html').scrollTop(0);
+    })
+ 
+    
+  })
+  </script>
+</head>
+<body>
+  <div class="wrap fixed-pad">
+    <div class="course-cover">
+      <a class="course-goback" href=""></a>
+      <div class="play-content">
+        <p class="course-cover-con" data-src="https://p.bokecc.com/player?vid=30527D7BCD7C854F9C33DC5901307461&amp;siteid=46DFDA31005378B1&amp;autoStart=true&amp;width=&amp;height=&amp;playerid=8154E045DFBAE8D5&amp;playertype=1\">
+          <img class="play-img" src="images/_temp/course-cover.jpg" alt="">
+          <span class="course-play"><img src="images/play-icon.png" alt=""></span>
+        </p>
+        <div class="video-play" >
+        </div>
+      </div>
+      
+    </div>
+    <div class="detail-course-info">
+      <h2 class="detail-coursename">2019考研政治（徐涛独家演讲）全程班型化+冲刺】最后12小时</h2>
+      <div class="det-extra-info">
+        <span>有效期至2019-07-20</span>
+        <span>112课时</span>
+        <span class="buy-number">10000人已购</span>
+      </div>
+      <div class="det-price-agree">
+        <div class="det-cellprice">
+          <p class="det-present-price">&yen;8420</p>
+          <del class="det-original-price">&yen;13800</del>
+        </div>
+        <a class="course-agreement" href="">查看协议</a>
+      </div>
+    </div>
+    <div class="course-special-offer">
+      <div class="special-offer-list ">
+        <span class="special-offer-type">领券</span>
+        <p class="det-course-coupon" href="">
+          <span>满300减100</span>
+          <span>满100减50</span>
+          <span>满100减50</span>
+          <span>满100减50</span>
+          <span>满100减50</span>
+        </p>
+      </div>
+      <div class="special-offer-list ">
+        <span class="special-offer-type">活动</span>
+        <p class="det-course-activity" href="">
+          <span>支持花呗分期</span>
+          <span>成功卡特惠</span>
+          <span>支持学习卡</span>
+          <span>学习卡</span>
+          <span>支持学习卡</span>
+        </p>
+      </div>
+      <div class="special-offer-list ">
+        <span class="special-offer-type">服务</span>
+        <p class="det-course-services" href="">
+          <span>花呗免息</span>
+          <span>班主任督导</span>
+          <span>阶段测评</span>
+          <span>正版图书资料</span>
+          <span>正版图书资料</span>
+        </p>
+      </div>
+    </div>
+    <!-- 领券弹窗  -->
+    <div class="slide-coupon">
+      <div class="slide-coupon-inner">
+        <h2 class="slide-coupon-title">优惠券</h2>
+        <div class="course-coupon">
+          <div class="coupon-item reduce-item">
+            <span class="side-dota"></span>
+            <div class="coupon-kindtit">
+              <div class="coupon-value">
+                  <h3 class="coupon-amount"><small>¥</small>12000</h3>
+                  <p class="reduce-condition">满10000元可用</p>
+              </div>
+              <a class="get-coupon" href="javascripg:void(0)">领取</a>
+            </div>
+            <div class="coupon-details">
+              <div class="coupon-detTop2">
+                  <h3 class="coupon-title"><span class="coupon-mark">班型券</span>考研英语特训个人简历考研英语特训个人简历</h3>
+                  <div class="coupon-validTime"><span>2019-05-01 10:30:20 至</span><span>2019-05-31 12:00:00</span></div>
+              </div>
+              
+            </div>
+            <!-- <img src="images/receive.png" alt="" class="have-receive"> -->
+          </div>
+          <div class="coupon-item discount-item">
+            <span class="side-dota"></span>
+            <div class="coupon-kindtit">
+              <div class="coupon-value">
+                  <h3 class="coupon-amount">8.5<big>折</big></h3>
+                  <p class="reduce-condition">满10000元可用</p>
+              </div>
+              <!-- <a class="get-coupon" href="">领取</a> -->
+              <a class="get-coupon get-status" href="javascripg:void(0)">已领取</a>
+            </div>
+            <div class="coupon-details">
+              <div class="coupon-detTop2">
+                  <h3 class="coupon-title"><span class="coupon-mark">班型券</span>考研英语特训个人简历考研英语特训个人简历</h3>
+                  <div class="coupon-validTime"><span>2019-05-01 10:30:20 至</span><span>2019-05-31 12:00:00</span></div>
+              </div>
+              
+            </div>
+            <img src="images/receive.png" alt="" class="have-receive">
+          </div>
+          <div class="coupon-item orange-item">
+            <span class="side-dota"></span>
+            <div class="coupon-kindtit">
+              <div class="coupon-value">
+                  <h3 class="coupon-amount">8.5<big>折</big></h3>
+                  <p class="reduce-condition">满10000元可用</p>
+              </div>
+              <a class="get-coupon get-status" href="javascripg:void(0)">已领取</a>
+            </div>
+            <div class="coupon-details">
+              <div class="coupon-detTop2">
+                  <h3 class="coupon-title"><span class="coupon-mark">班型券</span>考研英语特训个人简历考研英语特训个人简历</h3>
+                  <div class="coupon-validTime"><span>2019-05-01 10:30:20 至</span><span>2019-05-31 12:00:00</span></div>
+              </div>
+              
+            </div>
+            <img src="images/receive.png" alt="" class="have-receive">
+          </div>
+        </div>
+        <span class="slide-close-btn">取消</span>
+      </div>
+    </div>
+    <p class="receive-prompt"><span>恭喜你，又抢到了</span></p>
+    <!-- 领券弹窗 end -->
+    <div class="multiple-course">
+        <div class="public-title">
+            <h2>联报优惠</h2>
+          </div>
+        <div class="multiple-discount" >
+          <div class="multiple-swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="multiple-item">
+                          <a href="">
+                              <p class="multiple-subject">中医临综</p>
+                              <p class="multiple-sub-type">全程班</p>
+                            </a>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="multiple-item">
+                          <a href="">
+                              <p class="multiple-subject">中医临综中医临综</p>
+                              <p class="multiple-sub-type">全程班</p>
+                            </a>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      <div class="multiple-item">
+                          <a href="">
+                              <p class="multiple-subject">中医临综中医临综中医临综</p>
+                              <p class="multiple-sub-type">全程班</p>
+                            </a>
+                      </div>
+                  </div>
+                </div>
+          </div>
+          
+
+          
+        </div>
+    </div>
+    <div class="content-module">
+      <div class="detail-course-tab ">
+          <!-- detail-tab-fixed -->
+        <div class="detail-coursetab-inner">
+            <span class="current">介绍</span>
+            <span>课程目录</span>
+            <span>配套资料</span>
+            <span>名师介绍</span>
+        </div>
+      </div>
+      <div class="detail-tab-con">
+        <div class="swiper-wrapper">
+          <!-- course-intro start -->
+          <div class="swiper-slide">
+            <div class="course-intro">
+                <img src="images/_temp/ban1.jpg" alt="">
+                <img src="images/_temp/ban1.jpg" alt="">
+                <img src="images/_temp/ban1.jpg" alt="">
+                <img src="images/_temp/ban1.jpg" alt="">
+            </div>
+            <div class="buy-notes">
+              <p>一、录播类课程</p> 
+              <p>1、录播类课程在购买7日内可以联系售后客服申请退换课。</p>
+              <p>2、录播类课程七日内可申请换课，若有差额需要补齐费用（同期考研英语一和英语二课程在课程有效期截止之前允许换课）。</p>
+              <p>3、课程有效期截止前2个月可以申请升级班次（同类课程增加科目或升舱），需要补齐课程差价。</p>
+              <p>4、退换课需扣除已经产生的相关费用，资料费、快递费、课时费、班主任服务费等。</p>
+              <p>二、直播类课程</p>
+              <p>
+              直播课程开课前允许申请退换课，开课后不允许退换课。退换课发生时需要已经产生的相关费用，如资料费、快递费等。
+              </p>
+            </div>
+          </div>
+          <!-- course-intro end -->
+          <!-- tree start -->
+          <div class="swiper-slide">
+              <div class="choose-structure">
+                <span class="current">大纲</span>
+                <span>|</span>
+                <span>仅看试听</span>
+              </div>
+              <div class="course-structure">
+                  <ul>
+                    
+                    <!-- <li>
+                      <div class="course-menu up-state">2019考研马原政治基础全程课程1111</div>
+                      <ul>
+                        <li>
+                          <div class="course-section">考研马原政治基础全程课程222</div>
+                          <div class="lecture-notes">
+                            <p>讲师：何凯文</p>
+                            <a href="javascript:void(0)" class="view-notes">查看讲义</a>
+                          </div>
+                          <ul class="course-lesson">
+                            <li>
+                                <span class="lesson-name">2020考研专业院校规划讲座院校报名考试333</span>  
+                                <a class="course-audition" href="javascript:void(0)">试听</a>
+                            </li>
+                            <li>
+                                <span  class="lesson-name">2020考研专业院校规划讲座院校</span>  
+                                <p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <div class="course-section">考研马原政治基础全程课程222</div>
+                          <div class="lecture-notes">
+                            <p>讲师：何凯文</p>
+                            <a href="javascript:void(0)" class="view-notes">查看讲义</a>
+                          </div>
+                          <ul class="course-lesson">
+                            <li>
+                                <span class="lesson-name">2020考研专业院校规划讲座院校报名考试333</span>  
+                                <a class="course-audition" href="javascript:void(0)">试听</a>
+                            </li>
+                            <li>
+                                <span  class="lesson-name">2020考研专业院校规划讲座院校</span>  
+                                <p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="course-menu up-state">2019考研马原政治基础全程课程础全程课程1111</div>
+                      <ul>
+                        <li>
+                          <div class="course-section">考研马原政治基础全程课程222</div>
+                          <ul>
+                            <li>
+                                <div class="course-section">考研马原政治基础全程课程333</div>
+                                <div class="lecture-notes">
+                                  <p>讲师：何凯文</p>
+                                  <a href="javascript:void(0)" class="view-notes">查看讲义</a>
+                                </div>
+                                <ul class="course-lesson">
+                                  <li>
+                                      <span  class="lesson-name">考研专业院校规划讲座院校报名考试4444</span>  
+                                      <a class="course-audition" href="javascript:void(0)">试听</a>
+                                  </li>
+                                </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <div class="course-section">考研马原政治基础全程课程222</div>
+                          <ul>
+                            <li>
+                                <div class="course-section">考研马原政治基础全程课程333</div>
+                                <div class="lecture-notes">
+                                  <p>讲师：何凯文</p>
+                                  <a href="javascript:void(0)" class="view-notes">查看讲义</a>
+                                </div>
+                                <ul class="course-lesson">
+                                  <li>
+                                      <span  class="lesson-name">考研专业院校规划讲座院校报名考试4444</span>  
+                                      <a class="course-audition" href="javascript:void(0)">试听</a>
+                                  </li>
+                                </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li> -->
+
+                  </ul>
+              </div>
+              
+          </div>
+          <!-- tree end -->
+          <!-- data start -->
+          <div class="swiper-slide">
+            配套资料
+          </div>
+          <!-- data end -->
+          <!-- teacher start -->
+          <div class="swiper-slide">
+            <div class="course-teacher">
+              <div class="cour-teacher-list">
+                <p class="teacher-photo"><img src="images/_temp/teacher.png" alt=""></p>
+                <div class="cour-teacher-inner">
+                    <h3 class="det-teacher-name">段永平</h3>
+                    <p class="det-teach-subject">毛泽东思想和中国特色社会主义理论体系概论、思想道德修养与法律基础、形势与政策及当代世界经济与政治</p>
+                    <p class="det-teach-descript">授课风格诙谐幽默，学冠古今恢宏大气。深谙各类国内外考试出题思路及命题规律，短时间内帮助学生迅速掌握考研夺分“密钥”</p>
+                </div>
+              </div>
+              <div class="cour-teacher-list">
+                <p class="teacher-photo"><img src="images/_temp/teacher.png" alt=""></p>
+                <div class="cour-teacher-inner">
+                    <h3 class="det-teacher-name">段永平</h3>
+                    <p class="det-teach-subject">综合素质、教育知识与能力
+                    <p class="det-teach-descript">授课风格诙谐幽默，学冠古今恢宏大气。</p>
+                </div>
+              </div>
+              <div class="cour-teacher-list">
+                <p class="teacher-photo"><img src="images/_temp/teacher.png" alt=""></p>
+                <div class="cour-teacher-inner">
+                    <h3 class="det-teacher-name">段永平</h3>
+                    <p class="det-teach-subject">毛泽东思想和中国特色社会主义理论体系概论、思想道德修养与法律基础、形势与政策及当代世界经济与政治</p>
+                    <p class="det-teach-descript">授课风格诙谐幽默，学冠古今恢宏大气。深谙各类国内外考试出题思路及命题规律，短时间内帮助学生迅速掌握考研夺分“密钥”</p>
+                </div>
+              </div>
+              <div class="cour-teacher-list">
+                <p class="teacher-photo"><img src="images/_temp/teacher.png" alt=""></p>
+                <div class="cour-teacher-inner">
+                    <h3 class="det-teacher-name">段永平</h3>
+                    <p class="det-teach-subject">毛泽东思想和中国特色社会主义理论体系概论、思想道德修养与法律基础、形势与政策及当代世界经济与政治</p>
+                    <p class="det-teach-descript">授课风格诙谐幽默，学冠古今恢宏大气。深谙各类国内外考试出题思路及命题规律，短时间内帮助学生迅速掌握考研夺分“密钥”</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- teacher end -->
+          
+        </div>
+      </div>
+      <div class="check-handouts">
+          <div class="handouts-inner">
+            <h3 class="handouts-title">课程阶段讲义</h3>
+            <div class="handouts-list">
+              <p><span class="list-num">1、</span>走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">2、</span>走近托福写作—课程讲义走近托福写作—课程讲义走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">3、</span>走近托福写作—课程讲义走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">4、</span>走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">5、</span>走近托福写作—课程讲义走近托福写作—课程讲义走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">6、</span>走近托福写作—课程讲义走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">7、</span>走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">8、</span>走近托福写作—课程讲义-岳丽凯课</p>
+              <p><span class="list-num">9、</span>走近托福写作—课程讲义-岳丽凯课</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- bottom-menu -->
+  <div class="bottom-menu">
+    <div class="detail-bot-menu">
+      <div class="course-bot-menu">
+          <ul class="bot-menu-icon">
+              <li>
+                <a href="">
+                  <img src="images/ind-bot-tel.png" alt="">
+                  <span>电话</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="images/ind-bot-zx.png" alt="">
+                  <span>在线咨询</span>
+                </a>
+              </li>
+              <li>
+                <a class="course-collect" href="javascript:void(0)">
+                  <img src="images/collect.png" alt="">
+                  <span>收藏</span>
+                </a>
+                <a class="course-collect" href="javascript:void(0)" style="display:none;">
+                  <img src="images/collect-On.png" alt="">
+                  <span>已收藏</span>
+                </a>
+              </li>
+            </ul>
+            <!-- <a href="" class="de-buy-course">立即报名</a> -->
+            <a href="" class="de-buy-course">去APP看课</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<script>
+  // 方便设计查看
+  $('.course-collect').click(function(){
+    $(this).hide().siblings().show();
+  });
+
+  //模拟课程结构
+      var str=""
+      function createTree(arr){
+        if(arr){
+          var course=arr;
+          str+="<ul>";
+          for(var i=0;i<course.length;i++){
+            str+='<li>'
+            if(course[i]['Children'].length>0){
+              if(course[i].Level==1){
+                str+='<div class="course-menu up-state">'+course[i]['Name']+'</div>'
+              }else{
+                console.log(course[i].Level)
+                str+='<div class="course-section">'+course[i]['Name']+'</div>'
+              }
+            }else if(course[i]['Children'].length==0 && course[i]['LessonList'].length>0){
+              if(course[i].Level==1){    //只有两级
+                str+='<div class="course-menu up-state">'+course[i]['Name']+'</div>'
+              }else{
+                str+='<div class="course-section">'+course[i]['Name']+'</div>';
+              }
+              str+='<div class="lecture-notes"><p>'+'讲师：何凯文'+'</p><a href="javascript:void(0)" class="view-notes">查看讲义</a></div>';
+              for(var j=0;j<course[i]['LessonList'].length;j++){
+                str+='<ul class="course-lesson"><li><span class="lesson-name">'+course[i]['LessonList'][j].LessonName+'</span> <a class="course-audition" href="javascript:void(0)" data-src="https://p.bokecc.com/player?vid=30527D7BCD7C854F9C33DC5901307461&amp;siteid=46DFDA31005378B1&amp;autoStart=true&amp;width=&amp;height=&amp;playerid=8154E045DFBAE8D5&amp;playertype=1\">试听</a></li><li><span  class="lesson-name">2020考研专业院校规划讲座院校</span><p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p></li></ul>'  
+              }
+            }
+
+            createTree(course[i]["Children"]);
+            str+='</li>'
+          }
+          str+='</ul>';
+          
+        }
+      }
+      
+    
+//模拟课程结构
+var arr=[
+    {
+        "Id":2285,
+        "Name":"2019考研复试无忧通关班",
+        "ParentId":0,
+        "Level":1,
+        "IsLeaf":false,
+        "IsStructLeaf":false,
+        "IsShow":false,
+        "LessonCount":0,
+        "LessonList":[
+
+        ],
+        "Children":[
+            {
+                "Id":2292,
+                "Name":"综合面试素养",
+                "ParentId":2285,
+                "Level":2,
+                "IsLeaf":false,
+                "IsStructLeaf":false,
+                "IsShow":true,
+                "LessonCount":0,
+                "LessonList":[
+
+                ],
+                "Children":[
+                    {
+                        "Id":2313,
+                        "Name":"01-复试礼仪＆复试技巧",
+                        "ParentId":2292,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6419,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关01-复试礼仪＆复试技巧",
+                                "StartTime":"2019-01-19 12:00:00.000",
+                                "EndTime":"2019-01-19 13:30:00.000",
+                                "TeacherName":"刘冰"
+                            },
+                            {
+                                "Id":64192,
+                                "CourseId":7872,
+                                "LessonName":"2019考研复试无忧通关02-复试礼仪＆复试技巧",
+                                "StartTime":"2019-01-19 12:00:00.000",
+                                "EndTime":"2019-01-19 13:30:00.000",
+                                "TeacherName":"刘冰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2314,
+                        "Name":"02-如何打造个性化复试材料",
+                        "ParentId":2292,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6420,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关02-如何打造个性化复试材料",
+                                "StartTime":"2019-01-19 14:00:00.000",
+                                "EndTime":"2019-01-19 15:00:00.000",
+                                "TeacherName":"刘冰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2315,
+                        "Name":"03-自我介绍讲解",
+                        "ParentId":2292,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6421,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关03-自我介绍讲解",
+                                "StartTime":"2019-01-19 16:00:00.000",
+                                "EndTime":"2019-01-19 17:00:00.000",
+                                "TeacherName":"刘冰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2312,
+                        "Name":"04-面试常见话题＆个人简历包装",
+                        "ParentId":2292,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6422,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关04-面试常见话题＆个人简历包装",
+                                "StartTime":"2019-01-19 18:00:00.000",
+                                "EndTime":"2019-01-19 19:35:00.000",
+                                "TeacherName":"刘冰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    }
+                ]
+            },
+            {
+                "Id":2316,
+                "Name":"英语听力口语",
+                "ParentId":2285,
+                "Level":2,
+                "IsLeaf":false,
+                "IsStructLeaf":false,
+                "IsShow":true,
+                "LessonCount":0,
+                "LessonList":[
+
+                ],
+                "Children":[
+                    {
+                        "Id":2317,
+                        "Name":"05-英语听力①",
+                        "ParentId":2316,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6423,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关05-英语听力①",
+                                "StartTime":"2019-01-20 10:00:00.000",
+                                "EndTime":"2019-01-20 11:10:00.000",
+                                "TeacherName":"宁文兰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2628,
+                        "Name":"06-英语听力②",
+                        "ParentId":2316,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6424,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关06-英语听力②",
+                                "StartTime":"2019-01-20 14:00:00.000",
+                                "EndTime":"2019-01-20 15:00:00.000",
+                                "TeacherName":"宁文兰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2629,
+                        "Name":"07-英语听力③",
+                        "ParentId":2316,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6425,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关07-英语听力③",
+                                "StartTime":"2019-01-20 16:00:00.000",
+                                "EndTime":"2019-01-20 17:00:00.000",
+                                "TeacherName":"宁文兰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2318,
+                        "Name":"08-英语口语①",
+                        "ParentId":2316,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6426,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关08-英语口语①",
+                                "StartTime":"2019-01-21 10:00:00.000",
+                                "EndTime":"2019-01-21 11:35:00.000",
+                                "TeacherName":"王巧红"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2319,
+                        "Name":"09-英语口语②",
+                        "ParentId":2316,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6427,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关09-英语口语②",
+                                "StartTime":"2019-01-21 14:00:00.000",
+                                "EndTime":"2019-01-21 15:10:00.000",
+                                "TeacherName":"王巧红"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2630,
+                        "Name":"10-英语口语③",
+                        "ParentId":2316,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6428,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关10-英语口语③",
+                                "StartTime":"2019-01-21 16:00:00.000",
+                                "EndTime":"2019-01-21 17:15:00.000",
+                                "TeacherName":"王巧红"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2631,
+                        "Name":"11-英语自我介绍",
+                        "ParentId":2316,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6429,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关11-英语自我介绍",
+                                "StartTime":"2019-01-22 10:00:00.000",
+                                "EndTime":"2019-01-22 11:30:00.000",
+                                "TeacherName":"王巧红"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    }
+                ]
+            },
+            {
+                "Id":2320,
+                "Name":"无忧秘籍",
+                "ParentId":2285,
+                "Level":2,
+                "IsLeaf":false,
+                "IsStructLeaf":false,
+                "IsShow":true,
+                "LessonCount":0,
+                "LessonList":[
+
+                ],
+                "Children":[
+                    {
+                        "Id":2322,
+                        "Name":"12-复试临场发挥技巧",
+                        "ParentId":2320,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6430,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关12-复试临场发挥技巧",
+                                "StartTime":"2019-01-22 14:00:00.000",
+                                "EndTime":"2019-01-22 14:20:00.000",
+                                "TeacherName":"吴妮"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2321,
+                        "Name":"13-复试调剂①",
+                        "ParentId":2320,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6431,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关13-复试调剂①",
+                                "StartTime":"2019-01-22 14:30:00.000",
+                                "EndTime":"2019-01-22 14:50:00.000",
+                                "TeacherName":"吴妮"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    },
+                    {
+                        "Id":2632,
+                        "Name":"14-复试调剂②",
+                        "ParentId":2320,
+                        "Level":3,
+                        "IsLeaf":false,
+                        "IsStructLeaf":true,
+                        "IsShow":true,
+                        "LessonCount":1,
+                        "LessonList":[
+                            {
+                                "Id":6432,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关14-复试调剂②",
+                                "StartTime":"2019-01-22 15:00:00.000",
+                                "EndTime":"2019-01-22 15:20:00.000",
+                                "TeacherName":"吴妮"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+                    }
+                ]
+            }
+        ]
+    
+    
+},{
+        "Id":1111,
+        "Name":"2019考研复试无忧通关班",
+        "ParentId":0,
+        "Level":1,
+        "IsLeaf":false,
+        "IsStructLeaf":false,
+        "IsShow":false,
+        "LessonCount":0,
+        "LessonList":[
+                            {
+                                "Id":6419,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关01-复试礼仪＆复试技巧",
+                                "StartTime":"2019-01-19 12:00:00.000",
+                                "EndTime":"2019-01-19 13:30:00.000",
+                                "TeacherName":"刘冰"
+                            },
+                            {
+                                "Id":64192,
+                                "CourseId":7872,
+                                "LessonName":"2019考研复试无忧通关02-复试礼仪＆复试技巧",
+                                "StartTime":"2019-01-19 12:00:00.000",
+                                "EndTime":"2019-01-19 13:30:00.000",
+                                "TeacherName":"刘冰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+},
+{
+        "Id":1111,
+        "Name":"2019考研复试无忧通关班",
+        "ParentId":0,
+        "Level":1,
+        "IsLeaf":false,
+        "IsStructLeaf":false,
+        "IsShow":false,
+        "LessonCount":0,
+        "LessonList":[
+                            {
+                                "Id":6419,
+                                "CourseId":787,
+                                "LessonName":"2019考研复试无忧通关01-复试礼仪＆复试技巧",
+                                "StartTime":"2019-01-19 12:00:00.000",
+                                "EndTime":"2019-01-19 13:30:00.000",
+                                "TeacherName":"刘冰"
+                            },
+                            {
+                                "Id":64192,
+                                "CourseId":7872,
+                                "LessonName":"2019考研复试无忧通关02-复试礼仪＆复试技巧",
+                                "StartTime":"2019-01-19 12:00:00.000",
+                                "EndTime":"2019-01-19 13:30:00.000",
+                                "TeacherName":"刘冰"
+                            }
+                        ],
+                        "Children":[
+
+                        ]
+}
+
+]
+
+      createTree(arr);
+       $('.course-structure').append(str)
+</script>
+
+</body>
+</html>

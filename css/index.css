@@ -1,0 +1,353 @@
+.wrap {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.header .header-serach, .header .header-user-photo {
+  height: 100%;
+}
+
+.header .header-serach img, .header .header-user-photo img {
+  width: .58rem;
+  height: .58rem;
+  padding-top: .27rem;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1.1rem;
+  background: #fff;
+  z-index: 3;
+}
+
+.header .header-inner {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  height: 100%;
+  padding: 0 .3rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.header .header-left {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+  padding-top: .27rem;
+}
+
+.header .header-logo {
+  height: .56rem;
+}
+
+.header .header-download-app {
+  display: block;
+  width: 1.62rem;
+  height: .52rem;
+  border-radius: .26rem;
+  background: #2e88fe;
+  font-size: .26rem;
+  color: #fff;
+  line-height: .52rem;
+  text-align: center;
+  margin-left: .3rem;
+}
+
+.header .header-right {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.header .header-serach {
+  padding-right: .5rem;
+}
+
+.banner {
+  width: 6.9rem;
+  height: 3.1rem;
+  border-radius: .1rem;
+  margin: 1.1rem auto 0;
+  overflow: hidden;
+}
+
+.banner .banner-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: .1rem;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  border-radius: .1rem;
+  overflow: hidden;
+}
+
+.banner .swiper-slide {
+  transition: 300ms;
+  transform: scale(0.9);
+  border-radius: .1rem;
+}
+
+.banner .swiper-slide-active, .banner .swiper-slide-duplicate-active {
+  transform: scale(1);
+}
+
+.custom-pagination {
+  position: absolute;
+  left: auto !important;
+  right: .2rem !important;
+  bottom: .1rem !important;
+  text-align: center;
+  width: .7rem !important;
+  height: .3rem;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: .24rem;
+  border-radius: .15rem;
+  line-height: .3rem;
+  color: #fff;
+  word-spacing: 1px;
+  z-index: 2;
+}
+
+.subject-entry {
+  width: 6.9rem;
+  padding: .3rem 0 0;
+  text-align: center;
+  margin: 0 auto .3rem;
+}
+
+.subject-entry .subject-swiper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.subject-entry .subject-items {
+  display: block;
+  width: 100%;
+  font-size: .26rem;
+  color: #5a5a5a;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.subject-entry .subject-items img {
+  margin: 0 auto;
+}
+
+.subject-swiper .swiper-scrollbar {
+  background: rgba(102, 102, 102, 0.1);
+}
+
+.subject-swiper .swiper-slide {
+  float: left;
+  width: 20%;
+}
+
+.subject-entry .subject-swiper {
+  height: 3.1rem;
+}
+
+.subject-entry .subject-items {
+  height: 1.4rem;
+}
+
+.subject-entry .subject-items img {
+  width: .66rem;
+  height: .66rem;
+}
+
+.subject-swiper .swiper-scrollbar {
+  width: 30% !important;
+  left: 35% !important;
+  height: .06rem !important;
+  border-radius: .03rem !important;
+  overflow: hidden;
+}
+
+.coupon-entrance {
+  width: 100%;
+  height: 1.9rem;
+  padding: 0 0 .2rem;
+  border-bottom: 0.2rem solid #f1f4fd;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.coupon-entrance .entrance-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.coupon-entrance img {
+  width: 100%;
+  height: 100%;
+}
+
+.course-select {
+  padding: 0 0 .4rem;
+}
+
+.select-sub-title {
+  padding: 0 .3rem .2rem;
+  font-size: .24rem;
+  color: #999;
+  margin-top: -.1rem;
+}
+
+.option-course {
+  padding: 0 .1rem 0 .3rem;
+  height: 1.8rem;
+  overflow: hidden;
+}
+
+.option-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.option-swiper .swiper-slide {
+  float: left;
+  width: 3.08rem;
+  height: 1.6rem;
+  padding: .1rem 0;
+}
+
+.option-swiper .swiper-slide a {
+  display: block;
+  width: 2.88rem;
+  height: 100%;
+  padding-right: .2rem;
+}
+
+.option-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: .2rem;
+  box-shadow: 0 0 .16rem #ccc;
+}
+
+.public-more {
+  display: block;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+}
+
+.public-more span {
+  padding-right: .4rem;
+  background: url(../images/more.png) right center no-repeat;
+  background-size: .26rem .26rem;
+  font-size: .32rem;
+  color: #5a5a5a;
+}
+
+.public-course-mod {
+  border-top: 0.2rem solid #f1f4fd;
+}
+
+.course-item-main {
+  padding: .3rem;
+  border-bottom: 1px solid #f1f4fd;
+}
+
+.hot-info {
+  border-top: 0.2rem solid #f1f4fd;
+}
+
+.hot-news {
+  padding: 0 .3rem .2rem;
+  border-bottom: 1px solid #f1f4fd;
+}
+
+.hot-news ul {
+  overflow: hidden;
+}
+
+.hot-news li {
+  display: block;
+  position: relative;
+  font-size: .32rem;
+  color: #333;
+}
+
+.hot-news li a {
+  display: block;
+  height: .7rem;
+  padding-left: 1.2rem;
+  line-height: .7rem;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hot-news li .news-category {
+  position: absolute;
+  left: 0;
+  top: .18rem;
+  width: 1rem;
+  height: .34rem;
+  background: #2e88fe;
+  color: #fff;
+  line-height: .34rem;
+  text-align: center;
+  font-size: .22rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+}

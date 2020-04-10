@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>搜索结果</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <link rel="stylesheet" href="css/base.css">
+  <script src="js/fontREM.js"></script>
+</head>
+<body>
+    <div class="fixed-top">
+      <div class="wrap">
+          <div class="top-search">
+              <a href="" class="go-back"></a>
+              <form class="search-form" id="search-ipt" action="">
+                <input class="search-ipt" type="search" placeholder="搜索文都网校课程">
+              </form>
+            </div>
+            <div class="search-filter">
+              <span class="filter-list default-sort current">默认</span>
+              <span class="filter-list ">人气</span>
+              <p class=" filter-price" data-price="default"><span class="price-default">价格</span></p>
+            </div>
+      </div>
+    </div>
+
+    
+    
+    <div class="mescroll" id="loading-content">
+      <div class="mescroll-wrapper">
+        <div id="item-content">
+          <div class="list-course-item">
+              <div class="course-item">
+                  <a href="">
+                    <h3 class="course-name">
+                        <p class="course-label">
+                            <span class="reduction-label">减</span>
+                            <span class="discount-label">折</span>
+                            <span class="audition-label">听</span>
+                          </p>
+                      <p class="course-title">【协议】考研<span>英语</span>一高端辅导成功学</p>
+                    </h3>
+                    
+                    <div class="course-contain-info">
+                      <p>
+                          <span class="broadcast-time">直播时间：2019.12.01 19:30-21:30</span>
+                          <span>288课时</span>
+                      </p>
+                      <p>
+                          <span>188人学习</span>
+                      </p>
+                    </div>
+                    <div class="course-extra-info">
+                      <div class="course-lecturer">
+                        <p class="teacher-item">
+                          <img src="images/_temp/teacher.png" alt="">
+                          <span>文都名师</span>
+                        </p>
+                      </div>
+                      <div class="course-price">
+                        <del class="cour-original-price">￥2867</del>
+                        <p class="discount-price">￥21867</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- no-result start -->
+    <!-- <div class="no-result">
+      <img src="images/no-result.png" alt="">
+      <p>抱歉，暂无相关内容</p>
+      <a class="back-home-page" href="">返回首页</a>
+    </div> -->
+  
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/mescroll.min.js"></script>
+  <script src="js/more.js"></script>
+  <script>
+ //filter-price
+ $('.filter-price').click(function(){
+    if($(this).attr('data-price')=="price-drop"){
+      $(this).addClass('current').find('.price-default').addClass('price-rise').removeClass('price-drop');
+      $(this).attr('data-price','price-rise')
+    }else{
+      $(this).addClass('current').find('.price-default').addClass('price-drop').removeClass('price-rise');
+      $(this).attr('data-price','price-drop')
+    }
+    $(this).siblings('.filter-list').removeClass('current')
+  })
+  $('.filter-list').click(function(){
+    $(this).addClass('current').siblings().removeClass('current');
+    $('.filter-price').attr('data-price','default').find('.price-default').removeClass('price-drop price-rise')
+  })
+  </script>
+</body>
+</html>
