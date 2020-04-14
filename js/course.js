@@ -36,18 +36,23 @@ $(function(){
     $(this).siblings('ul').slideToggle();
   });
   $('.course-section').click(function(){
+    $(this).toggleClass('open-state')
     $(this).siblings('ul').slideToggle();
   })
 
   //讲义
-  $('.view-notes').click(function(){
-    $('.check-handouts').animate({'bottom':0},300);
-  });
-  $('.check-handouts').click(function(){
-    $('.check-handouts').animate({'bottom':'-100%'},300);
-  });
-  $('.handouts-inner,.slide-coupon-inner').click(function(e){
-    e.stopPropagation();
+  // $('.view-notes').click(function(){
+  //   $('.check-handouts').animate({'bottom':0},300);
+  // });
+  // $('.check-handouts').click(function(){
+  //   $('.check-handouts').animate({'bottom':'-100%'},300);
+  // });
+  // $('.handouts-inner,.slide-coupon-inner').click(function(e){
+  //   e.stopPropagation();
+  // })
+  $('.match-dataTit span').click(function(){
+    $(this).addClass('current').siblings().removeClass('current');
+    $('.matchData-content .handouts-list').eq($(this).index()).show().siblings().hide();
   })
   
   //弹出优惠券

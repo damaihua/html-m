@@ -351,3 +351,55 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+.course-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.course-tabNav {
+  width: 100%;
+  height: .6rem;
+  line-height: .6rem;
+  box-sizing: border-box;
+  padding-left: .3rem;
+  overflow: hidden;
+}
+
+.course-tabNav .swiper-slide {
+  float: left;
+  width: auto;
+}
+
+.course-tabNav .swiper-slide.current span {
+  background: url(../images/scrollBg.png) bottom center no-repeat;
+  background-size: .44rem .04rem;
+}
+
+.course-tabNav .swiper-slide span {
+  display: block;
+  font-size: .34rem;
+  color: #333;
+  margin-right: .3rem;
+}
+
+.course-tabItem {
+  display: none;
+}
+
+.national-cooperative {
+  height: 1rem;
+  background: url(../images/title-more.png) center right 0.3rem no-repeat;
+  background-size: .14rem .24rem;
+  border-top: 0.2rem solid #f1f4fd;
+  line-height: 1rem;
+  color: #666;
+  font-size: .3rem;
+}
+
+.national-cooperative a {
+  display: block;
+  padding: 0 .3rem 0 .5rem;
+  background: url(../images/line.png) left 0.3rem center no-repeat;
+  background-size: 2px .28rem;
+}

@@ -42,7 +42,20 @@ var optionSwiper = new Swiper('.option-swiper',{
 //     });
 
 
-    //coupon-entrance  领券中心
+//course-swiper
+var subjectSwiper=new Swiper('.course-tabNav',{
+  slidesPerView: 'auto',
+  freeMode: true,
+  noSwiping : true,
+  
+})
+$('.public-course-mod .course-tabNav .swiper-slide').click(function(){
+  var ind=$(this).index();
+  console.log(ind)
+  $(this).addClass('current').siblings().removeClass('current');
+  $(this).parents('.public-course-mod').find('.course-tabContent .course-tabItem').eq(ind).show().siblings().hide();
+})
+    //coupon-entrance
 var entranceSwiper=new Swiper('.entrance-swiper',{
   loop:true,
   autoplay:{

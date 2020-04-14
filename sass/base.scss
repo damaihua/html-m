@@ -323,7 +323,9 @@ $font-color999:#999;
   background:#fff;
   .search-form{
     display:block;
-    width:100%;
+    position:relative;
+    padding-right:.8rem;
+   
     height:100%;
   }
   .search-ipt{
@@ -339,6 +341,23 @@ $font-color999:#999;
     box-sizing: border-box;
     overflow: hidden;
   }
+  .search-btn{
+    position:absolute;
+    right:0;
+    top:0;
+    width:.8rem;
+    height:100%;
+    background:url(../images/search-icon.png) right center no-repeat;
+    background-size:.58rem .58rem;
+  }
+}
+.list-headSearch{
+  position:absolute;right:.3rem;top:0;height:100%;
+  @include flex-layout(column,center );
+  img{
+    width:.58rem;
+    height:.58rem;
+  }
 }
 .go-back{
   position:absolute;
@@ -349,6 +368,14 @@ $font-color999:#999;
   margin-top:-.38rem;
   background:url(../images/go-back.png) .3rem center no-repeat;
   background-size:.2rem .4rem;
+}
+.fixed-filter{
+  position:fixed;
+  left:0;
+  top:1.1rem;
+  width:100%;
+  z-index:2;
+
 }
 .search-hotcourse{
   padding-left:.3rem;
@@ -447,6 +474,60 @@ $font-color999:#999;
 //.mescroll-empty{padding:0.7rem 0 0; font-size: .373rem; color:#777; text-align: center;}
 //.empty-icon{width:6rem; margin:0 auto 0.3rem;}
 
+// bind-popupbind-popup
+.bind-popup{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index: 9;
+  .bind-content{
+    position: absolute;
+    left:10%;
+    top:50%;
+    margin:-3.3rem 0 0 0;
+    width:80%;
+    height:6.6rem;
+    background:#fff;
+    border-radius:.2rem;
+    .phone-icon{
+      width:2.6rem;
+      max-width:200px;
+      padding:.4rem 0 .3rem;
+      margin:0 auto;
+    }
+    p{
+      
+      font-size:.34rem;
+      color:#444;
+      line-height:.54rem;
+      text-align: center;
+    }
+    .bind-phoneNum{
+      display:block;
+      width:80%;
+      height:.76rem;
+      background: linear-gradient(to right, #6db4fc,#4688f7);
+
+      line-height: .76rem;
+      text-align: center;
+      border-radius:.38rem;
+      color:#fff;
+      font-size:.3rem;
+      margin:.4rem auto 0;
+    }
+    .popup-close{
+      position:absolute;
+      right:0;
+      top:0;
+      width:.9rem;
+      height:.9rem;
+      border-radius:0 .2rem 0 0;
+    }
+  }
+}
 
 // live-list
 .public-headline{
@@ -504,7 +585,8 @@ $font-color999:#999;
 
   width:100%;
   height:100%;
-  padding-top:1.9rem;
+  // padding-top:1.9rem;
+  padding-top:1rem;
   box-sizing: border-box;
   overflow-y: auto;
 
@@ -516,7 +598,22 @@ $font-color999:#999;
   max-width:750px;
   margin:0 auto;
 }
-
+.top-subjectSort{
+  background:#fff;
+  padding:.2rem .3rem .2rem 0;
+  font-size:.28rem;
+  color:#666;
+  line-height: .6rem;
+  
+  span{
+    
+    margin-left:.3rem;
+    white-space: nowrap;
+    &.current{
+      color:#4688f6;
+    }
+  }
+}
 // course-list
 // .public-operate{
 //   position:absolute;

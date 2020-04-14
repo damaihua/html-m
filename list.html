@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>直播课堂</title>
+  <title>考研公共课</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -18,41 +18,54 @@
       <div class="wrap">
         <div class="public-headline">
             <a href="" class="go-back"></a>
-            <h1 class="public-topname">直播课堂</h1>
+            <h1 class="public-topname">考研公共课</h1>
+            <a href="search.html" class="list-headSearch"><img src="images/search-icon.png" alt=""></a>
           </div>
-          <div class="scroll-nav">
-            <div class="nav-subject-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <span>推荐</span>
-                </div>
-                <div class="swiper-slide">
-                  <span>考研</span>
-                </div>
-                <div class="swiper-slide">
-                  <span>四六级</span>
-                </div>
-                <div class="swiper-slide">
-                  <span>医师资格</span>
-                </div>
-                <div class="swiper-slide">
-                  <span>护士卫生</span>
-                </div>
-                <div class="swiper-slide">
-                  <span>执业护士</span>
-                </div>
-                <div class="swiper-slide">
-                  <span>建考</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
     </div>
   
     
     
     <div class="mescroll" id="loading-content">
+      <div class="scroll-nav">
+        <div class="nav-subject-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <span>推荐</span>
+            </div>
+            <div class="swiper-slide">
+              <span>考研</span>
+            </div>
+            <div class="swiper-slide">
+              <span>四六级</span>
+            </div>
+            <div class="swiper-slide">
+              <span>医师资格</span>
+            </div>
+            <div class="swiper-slide">
+              <span>护士卫生</span>
+            </div>
+            <div class="swiper-slide">
+              <span>执业护士</span>
+            </div>
+            <div class="swiper-slide">
+              <span>建考</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-subjectSort">
+        <span class="current">英语一</span>
+        <span>英语二</span>
+        <span>英语三</span>
+        <span>英语四</span>
+        <span>英语五</span>
+        <span>英语三</span>
+        <span>集训营</span>
+        <span>英语五</span>
+      </div>
+
       <div class="mescroll-wrapper">
         <div id="item-content">
           <div class="list-course-item">
@@ -237,19 +250,30 @@
           </div>
         </div>
       </div>
+      <!-- no-result start -->
+      <div class="no-result" style="display:none;">
+        <img src="images/no-result.png" alt="">
+        <p>抱歉，暂无相关内容</p>
+        <a class="back-home-page" href="">返回首页</a>
+      </div>
+
     </div>
-    <!-- no-result start -->
-    <div class="no-result" style="display:none;">
-      <img src="images/no-result.png" alt="">
-      <p>抱歉，暂无相关内容</p>
-      <a class="back-home-page" href="">返回首页</a>
-    </div>
+    
   
 
   <script src="js/jquery.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/mescroll.min.js"></script>
   <script>
+    $('.scroll-nav .swiper-slide:not(first-child)').click(function(){
+      $('.top-subjectSort').show();
+    })
+    $('.scroll-nav .swiper-slide:first').click(function(){
+      $('.top-subjectSort').hide();
+    })
+    $('.top-subjectSort span').click(function(){
+      $(this).addClass('current').siblings().removeClass('current')
+    })
   var num=0
   var navSwiper = new Swiper('.nav-subject-swiper',{
         slidesPerView: 'auto',
@@ -295,7 +319,7 @@
 <script>
   // 方便设计查看缺省页   没用
 $('.scroll-nav .swiper-slide').eq(3).click(function(){
-  $('#loading-content').hide();
+  $('.mescroll-wrapper').hide();
   $('.no-result').show();
 })
 </script>

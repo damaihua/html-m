@@ -141,6 +141,76 @@
   text-decoration: underline;
 }
 
+.limite-activity {
+  height: 1.1rem;
+  background: #ffd3d3;
+}
+
+.limite-activity .limite-title {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background: url(../images/limite-bg.png) no-repeat;
+  background-size: 100% 100%;
+  font-size: .34rem;
+  color: #fff;
+  line-height: 1.1rem;
+}
+
+.limite-activity .limite-title span {
+  display: block;
+  padding-left: .7rem;
+  background: url(../images/time.png) left 0.3rem center no-repeat;
+  background-size: .27rem .33rem;
+}
+
+.limite-activity .remain-time {
+  height: 100%;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  font-size: .22rem;
+  color: #e32801;
+}
+
+.limite-activity .remain-time p {
+  font-size: .2rem;
+}
+
+.limite-activity .remain-time .detail-time {
+  white-space: nowrap;
+}
+
+.limite-activity .remain-time .detail-time span {
+  display: inline-block;
+  padding: 0 .1rem;
+  height: .42rem;
+  line-height: .42rem;
+  background: #e32901;
+  color: #fff;
+  font-size: .24rem;
+  border-radius: .06rem;
+  margin: .05rem;
+}
+
 .detail-course-tab {
   position: absolute;
   left: 0;
@@ -218,13 +288,9 @@
 
 .detail-tab-con .buy-notes {
   padding: .3rem .3rem 0;
-  font-size: .36rem;
+  font-size: .3rem;
   color: #666;
   line-height: .56rem;
-}
-
-.detail-tab-con .buy-notes p {
-  margin-bottom: .3rem;
 }
 
 .course-teacher {
@@ -433,41 +499,62 @@
 }
 
 .course-structure {
-  padding: .2rem .3rem 0;
+  padding: .2rem 0 0;
 }
 
 .course-structure .course-menu {
   font-size: .36rem;
   color: #333;
   line-height: .54rem;
-  padding: .2rem .6rem .2rem 0;
+  padding: .2rem .6rem .2rem .3rem;
   font-weight: bold;
-  background: url(../images/course-up.png) right center no-repeat;
+  background: url(../images/course-up.png) right 0.3rem center no-repeat;
   background-size: .33rem .18rem;
+  border-bottom: 1px solid #efefef;
 }
 
 .course-structure .course-menu.open-state {
-  background: url(../images/course-open.png) right center no-repeat;
+  background: url(../images/course-open.png) right 0.3rem center no-repeat;
   background-size: .33rem .18rem;
 }
 
 .course-structure li li .course-section {
   padding: .2rem .3rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  padding-left: .3rem;
+  padding-right: .6rem;
   font-size: .34rem;
   line-height: .54rem;
   color: #333;
-  background: #eff4fd;
   border-radius: .07rem;
   margin-bottom: .1rem;
+  border-bottom: 1px solid #efefef;
+  background: url(../images/course-up2.png) right 0.3rem center no-repeat;
+  background-size: .22rem .12rem;
 }
 
-.course-structure li li .lecture-notes {
-  padding-left: .3rem;
+.course-structure li li .course-section.open-state {
+  background: url(../images/course-open2.png) right 0.3rem center no-repeat;
+  background-size: .22rem .12rem;
 }
 
-.course-structure .lecture-notes {
-  padding-bottom: .2rem;
+.course-structure li li .course-section .course-chapter {
+  color: #333;
+}
+
+.course-structure .lecture-notice {
   font-size: .32rem;
+  color: #999;
+  line-height: .32rem;
+  font-size: .22rem;
+}
+
+.course-structure .lecture-notice span {
+  color: #f08043;
+}
+
+.course-structure .lecture-notice p {
   color: #999;
 }
 
@@ -475,7 +562,7 @@
   display: none;
 }
 
-.course-structure li ul ul {
+.course-structure li ul ul li {
   padding-left: .3rem;
 }
 
@@ -489,56 +576,40 @@
   padding-bottom: .2rem;
 }
 
+.course-lesson li:last-child {
+  border-bottom: 1px solid #efefef;
+}
+
 .course-lesson .lesson-name {
   display: block;
   padding-right: 1.2rem;
+  font-size: .28rem;
+  padding-top: .2rem;
+  line-height: .32rem;
 }
 
 .course-lesson .course-audition {
   position: absolute;
-  right: 0;
+  right: .3rem;
   top: 50%;
-  margin-top: -.27rem;
+  margin-top: -.15rem;
   display: block;
-  width: .94rem;
-  height: .54rem;
-  border: 1px solid #2e88fe;
+  height: .3rem;
+  padding-left: .3rem;
   color: #2e88fe;
   text-align: center;
-  line-height: .54rem;
+  line-height: .3rem;
   font-size: .24rem;
   border-radius: .27rem;
-  box-sizing: border-box;
+  background: url(../images/listen.png) no-repeat;
+  background-size: .26rem .26rem;
+  white-space: nowrap;
 }
 
 .content-module {
   position: relative;
   padding-top: .9rem;
   padding-bottom: .3rem;
-}
-
-.lecture-notes {
-  display: box;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  -o-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-}
-
-.lecture-notes .view-notes {
-  color: #2e88fe;
-  margin-left: .6rem;
 }
 
 .course-goback {
@@ -552,7 +623,7 @@
   z-index: 2;
 }
 
-.check-handouts, .slide-coupon {
+.slide-coupon {
   position: fixed;
   left: 0;
   bottom: -100%;
@@ -562,7 +633,7 @@
   z-index: 12;
 }
 
-.check-handouts .handouts-inner, .slide-coupon .slide-coupon-inner {
+.slide-coupon .slide-coupon-inner {
   width: 100%;
   max-width: 750px;
   background: #fff;
@@ -579,61 +650,69 @@
   text-align: center;
 }
 
-.check-handouts {
-  display: box;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  -ms-justify-content: flex-end;
-  -o-justify-content: flex-end;
-  justify-content: flex-end;
+.match-books {
+  padding: 0 .3rem;
 }
 
-.check-handouts .handouts-inner {
-  max-height: 50%;
+.match-books .match-dataTit {
+  padding: .2rem 0;
   display: box;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   -ms-justify-content: flex-start;
   -o-justify-content: flex-start;
   justify-content: flex-start;
+  height: .7rem;
+  line-height: .7rem;
+  font-size: .34rem;
+  color: #333;
+  margin-left: -.36rem;
 }
 
-.check-handouts .handouts-title {
-  height: 1.2rem;
-  min-height: 1.2rem;
-  line-height: 1.2rem;
-  padding: 0 .3rem 0;
-  font-size: .4rem;
+.match-books .match-dataTit span {
+  padding: 0 .36rem;
+  background: url(../images/line.png) right center no-repeat;
+  background-size: 2px .26rem;
 }
 
-.check-handouts .handouts-list {
-  padding: 0 .3rem;
+.match-books .match-dataTit span:last-child {
+  background: none;
+}
+
+.match-books .match-dataTit span.current {
+  color: #4688f6;
+}
+
+.no-matchData {
+  padding: 1rem 0;
+  font-size: .28rem;
+  color: #666;
+  text-align: center;
+}
+
+.no-matchData img {
+  width: 4.7rem;
+  margin: 0 auto;
+}
+
+.handouts-list {
+  display: none;
   font-size: .34rem;
   line-height: .46rem;
   overflow-y: auto;
 }
 
-.check-handouts .handouts-list p {
+.handouts-list p {
   padding-bottom: .3rem;
 }
 
@@ -656,14 +735,14 @@
 
 .course-livetime {
   line-height: .4rem;
-  color: #2e88fe;
+  color: #999;
   font-size: .24rem;
 }
 
 .course-livetime .state-title {
-  padding: 0 .12rem 0 0;
-  background: url(../images/live-bg.png) right center no-repeat;
-  background-size: 1px 10px;
+  padding: 0 .12rem 0 .3rem;
+  background: url(../images/play.png) left center no-repeat;
+  background-size: .2rem .14rem;
   margin-right: .12rem;
 }
 

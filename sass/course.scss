@@ -128,6 +128,50 @@ $font-color999:#999;
     text-decoration: underline;
   }
 }
+.limite-activity{
+  height:1.1rem;
+  background:#ffd3d3;
+  .limite-title{
+    float:left;
+    width:50%;
+    height:100%;
+    background:url(../images/limite-bg.png) no-repeat;
+    background-size:100% 100%;
+    font-size:.34rem;
+    color:#fff;
+    line-height: 1.1rem;
+    span{
+      display:block;
+      padding-left:.7rem;
+      background:url(../images/time.png) left .3rem center no-repeat;
+      background-size:.27rem .33rem;
+    }
+  }
+  .remain-time{
+    height:100%;
+    @include flex-layout(column,center);
+    @include align-items(center);
+    font-size:.22rem;
+    color:#e32801;
+    p{
+      font-size:.2rem;
+    }
+    .detail-time{
+      white-space: nowrap;
+      span{
+        display:inline-block;
+        padding:0 .1rem;
+        height:.42rem;
+        line-height: .42rem;
+        background:#e32901;
+        color:#fff;
+        font-size:.24rem;
+        border-radius:.06rem;
+        margin:.05rem;
+      }
+    }
+  }
+}
 // detail-course-tab
 
 .detail-course-tab{
@@ -183,11 +227,11 @@ $font-color999:#999;
   }
   .buy-notes{
     padding:.3rem .3rem 0;
-    font-size:.36rem;
+    font-size:.3rem;
       color:#666;
       line-height: .56rem;
     p{
-      margin-bottom:.3rem;
+      // margin-bottom:.3rem;
     }
   }
 }
@@ -389,17 +433,20 @@ margin-left:.5rem;
 }
 // course-structure
 .course-structure{
-  padding:.2rem .3rem 0;
+  // padding:.2rem .3rem 0;
+  padding:.2rem 0 0;
   .course-menu{
     font-size:.36rem;
     color:#333;
     line-height: .54rem;
-    padding:.2rem .6rem .2rem 0;
+    // padding:.2rem .6rem .2rem 0;
+    padding:.2rem .6rem .2rem .3rem;
     font-weight: bold;
-    background:url(../images/course-up.png) right center no-repeat;
+    background:url(../images/course-up.png) right .3rem center no-repeat;
     background-size:.33rem .18rem;
+    border-bottom:1px solid #efefef;
     &.open-state{
-      background:url(../images/course-open.png) right center no-repeat;
+      background:url(../images/course-open.png) right .3rem center no-repeat;
       background-size:.33rem .18rem;
     }
     // &.up-state{
@@ -411,30 +458,56 @@ margin-left:.5rem;
     li{
       .course-section{
         padding:.2rem .3rem;
+        padding-top:.2rem;
+        padding-bottom:.2rem;
+        padding-left:.3rem;
+        padding-right:.6rem;
         font-size:.34rem;
         line-height: .54rem;
         color:#333;
-        background:#eff4fd;
+        
         border-radius:.07rem;
         margin-bottom:.1rem;
+        border-bottom:1px solid #efefef;
+        background:url(../images/course-up2.png) right .3rem center no-repeat;
+        background-size:.22rem .12rem;
+        &.open-state{
+          background:url(../images/course-open2.png) right .3rem center no-repeat;
+          background-size:.22rem .12rem;
+        }
+        .course-chapter{
+          color:#333;
+        }
       }
-      .lecture-notes{
-        padding-left:.3rem;
+      .lecture-notice{
+        // padding-left:.3rem;
         
         
       }
     }
   }
-  .lecture-notes{
-    padding-bottom:.2rem;
+  .lecture-notice{
+    // padding-bottom:.2rem;
     font-size:.32rem;
     color: $font-color999;
+    line-height: .32rem;
+    font-size:.22rem;
+    span{
+      color:#f08043;
+      
+    }
+    p{
+      color:$font-color999;
+    }
   }
   li{
     ul{
       display:none;
       ul{
-        padding-left:.3rem;
+        li{
+          padding-left:.3rem;
+        }
+        
       }
     }
   }
@@ -446,26 +519,36 @@ margin-left:.5rem;
   li{
     position:relative;
     padding-bottom:.2rem;
+    &:last-child{
+      border-bottom:1px solid #efefef;
+    }
   }
   .lesson-name{
     display:block;
     padding-right:1.2rem;
+    font-size:.28rem;
+    padding-top:.2rem;
+    line-height: .32rem;
   }
   .course-audition{
     position:absolute;
-    right:0;
+    right:.3rem;
     top:50%;
-    margin-top:-.27rem;
+    margin-top:-.15rem;
     display:block;
-    width:.94rem;
-    height:.54rem;
-    border:1px solid $primary-color;
+    // width:.94rem;
+    height:.3rem;
+    padding-left:.3rem;
+    // border:1px solid $primary-color;
     color: $primary-color;
     text-align: center;
-    line-height: .54rem;
+    line-height: .3rem;
     font-size:.24rem;
     border-radius:.27rem;
-    box-sizing: border-box;
+    // box-sizing: border-box;
+    background:url(../images/listen.png) no-repeat;
+    background-size:.26rem .26rem;
+    white-space: nowrap;
   }
 }
 .content-module{
@@ -473,12 +556,12 @@ margin-left:.5rem;
   padding-top:.9rem;
   padding-bottom:.3rem;
 }
-.lecture-notes{
-  @include flex-layout(row, flex-start );
-  .view-notes{
-    color:$primary-color;
-    margin-left:.6rem;
-  }
+.lecture-notice{
+  // @include flex-layout(column, flex-start );
+  // .view-notes{
+  //   color:$primary-color;
+  //   margin-left:.6rem;
+  // }
 }
 .course-goback{
   position:absolute;
@@ -514,28 +597,44 @@ margin-left:.5rem;
     font-size:.4rem;
     text-align: center;
 }
-.check-handouts{
-  @extend %slide-bg;
-  
-  @include flex-layout(column,flex-end );
-  .handouts-inner{
-    @extend %slide-inner;
-     max-height:50%;
-    
-    @include flex-layout(column,flex-start );
-    // position:relative;
-    
-  }
-  .handouts-title{
-    height:1.2rem;
-    min-height:1.2rem;
-    line-height: 1.2rem;
-    padding:0 .3rem 0;
-    font-size:.4rem;
 
-  }
+ .match-books{
+   padding:0 .3rem;
+   .match-dataTit{
+     padding:.2rem 0;
+     @include flex-layout(row,flex-start);
+     height:.7rem;
+     line-height: .7rem;
+     font-size:.34rem;
+     color:#333;
+     margin-left:-.36rem;
+     span{
+      padding:0 .36rem;
+      background:url(../images/line.png) right center no-repeat;
+      background-size:2px .26rem;
+      &:last-child{
+        background:none;
+      }
+      &.current{
+        color:#4688f6;
+      }
+     }
+   }
+ }
+ .no-matchData{
+   padding:1rem 0;
+   font-size:.28rem;
+   color:#666;
+   text-align: center;
+   img{
+    width:4.7rem;
+    margin:0 auto;
+   }
+   
+ }
   .handouts-list{
-     padding:0 .3rem;
+    display:none;
+    //  padding:0 .3rem;
 
     font-size:.34rem;
     line-height: .46rem;
@@ -544,7 +643,7 @@ margin-left:.5rem;
       padding-bottom:.3rem;
     }
   }
-}
+
 .choose-structure{
   padding:.3rem .3rem 0;
   line-height: .4rem;
@@ -561,12 +660,12 @@ margin-left:.5rem;
 }
 .course-livetime{
   line-height: .4rem;
-  color:$primary-color;
+  color:$font-color999;
   font-size:.24rem;
   .state-title{
-    padding:0 .12rem 0 0;
-    background:url(../images/live-bg.png) right center no-repeat;
-    background-size:1px 10px;
+    padding:0 .12rem 0 .3rem;
+    background:url(../images/play.png) left center no-repeat;
+    background-size:.2rem .14rem;
     margin-right:.12rem;
   }
 }
