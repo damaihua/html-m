@@ -552,7 +552,7 @@ $font-color999:#999;
   border-top:1px solid $primary-light-blue;
   border-bottom:1px solid $primary-light-blue;
   font-size:.3rem;
-  color:#999;
+  color:#333;
   overflow: hidden;
   .swiper-slide{
     width:auto;
@@ -562,7 +562,8 @@ $font-color999:#999;
       &.current{
         color:$primary-color;
         font-weight: bold;
-        font-size:.32rem;
+        background: url(../images/scrollBg.png)  center .7rem no-repeat;
+      background-size: .4rem .04rem;
       }
     }
     
@@ -739,4 +740,6 @@ $font-color999:#999;
  
 }
 
-
+.only-listen{
+  padding: .2rem 0 0;
+}

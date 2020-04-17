@@ -208,7 +208,7 @@
       <div class="detail-course-tab ">
           <!-- detail-tab-fixed -->
         <div class="detail-coursetab-inner">
-            <span class="current">介绍</span>
+            <span class="current">课程详情</span>
             <span>课程目录</span>
             <span>配套资料</span>
             <span>名师介绍</span>
@@ -217,7 +217,7 @@
       <div class="detail-tab-con">
         <div class="swiper-wrapper">
           <!-- course-intro start -->
-          <div class="swiper-slide" style="display:none;">
+          <div class="swiper-slide">
             <div class="course-intro">
                 <img src="images/_temp/ban1.jpg" alt="">
                 <img src="images/_temp/ban1.jpg" alt="">
@@ -240,16 +240,18 @@
           <!-- tree start -->
           <div class="swiper-slide">
               <div class="choose-structure">
-                <span class="current">目录</span>
-                <span>|</span>
-                <span>仅看试听</span>
+                <span class="catalog current">目录</span>
+               
+                <span class="listen-module">仅看试听</span>
               </div>
               <div class="course-structure">
                   <ul>
                     <li>
-                      <div class="course-menu up-state">2019考研马原政治基础全程课程1111</div>
+                      <div class="course-menu up-state">
+                        <p class="course-menu-name">2019考研马原政治基础全程课程1111</p>
+                      </div>
                       <ul>
-                        <li>
+                        <li class="chapter-content">
                           <div class="course-section">
                             <div class="course-chapter">考研马原政治基础全程课程222</div>
                             <div class="lecture-notice">
@@ -260,16 +262,17 @@
                           
                           <ul class="course-lesson">
                             <li>
-                                <span class="lesson-name">2020考研专业院校规划讲座院校报名考试333</span>  
+                                
+                                <p class="lesson-name"><span class="lesson-num">01</span>2020考研专业院校规划讲座院校报名考试333</p>  
                                 <a class="course-audition" href="javascript:void(0)">试听</a>
                             </li>
                             <li>
-                                <span  class="lesson-name">2020考研专业院校规划讲座院校</span>  
+                                <p class="lesson-name"><span class="lesson-num">02</span>2020考研专业院校规划讲座院校报名考试333</p>   
                                 <p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p>
                             </li>
                           </ul>
                         </li>
-                        <li>
+                        <li  class="chapter-content">
                           <div class="course-section">
                             <div class="course-chapter">考研马原政治基础全程课程222</div>
                             <div class="lecture-notice">
@@ -280,22 +283,39 @@
                           
                           <ul class="course-lesson">
                             <li>
-                                <span class="lesson-name">2020考研专业院校规划讲座院校报名考试333</span>  
+                                <p class="lesson-name"><span class="lesson-num">01</span>2020考研专业院校规划讲座院校报名考试333</p>   
                                 <a class="course-audition" href="javascript:void(0)">试听</a>
                             </li>
                             <li>
-                                <span  class="lesson-name">2020考研专业院校规划讲座院校</span>  
+                                <p class="lesson-name"><span class="lesson-num">01</span>2020考研专业院校规划讲座院校报名考试333</p>    
                                 <p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p>
                             </li>
                           </ul>
                         </li>
                       </ul>
                     </li>
-                   
-                    
                   </ul>
               </div>
-              
+              <div class="only-listen" style="display:none;">
+                <ul class="course-lesson">
+                  <li>
+                                
+                    <p class="lesson-name"><span class="lesson-num">01</span>2020考研专业院校规划讲座院校报名考试333</p>  
+                    <a class="course-audition" href="javascript:void(0)">试听</a>
+                  </li>
+                  <li>
+                                
+                    <p class="lesson-name"><span class="lesson-num">01</span>2020考研专业院校规划讲座院校报名考试333</p>  
+                    <a class="course-audition" href="javascript:void(0)">试听</a>
+                    <p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p>
+                  </li>
+                  <li>
+                                
+                    <p class="lesson-name"><span class="lesson-num">01</span>2020考研专业院校规划讲座院校报名考试333</p>  
+                    <a class="course-audition" href="javascript:void(0)">试听</a>
+                  </li>
+                </ul>
+              </div>
           </div>
           <!-- tree end -->
           <!-- data start -->
@@ -422,6 +442,19 @@
     $(this).hide().siblings().show();
   });
 
+    $('.choose-structure span').click(function(){
+      $(this).addClass('current').siblings().removeClass('current')
+    })
+    $('.catalog').click(function(){
+      $('.course-structure').show();
+      $('.only-listen').hide()
+    })
+    $('.listen-module').click(function(){
+      $('.only-listen').show();
+      $('.course-structure').hide();
+    })
+
+
   //模拟课程结构
       var str=""
       function createTree(arr){
@@ -432,23 +465,29 @@
             str+='<li>'
             if(course[i]['Children'].length>0){
               if(course[i].Level==1){
-                str+='<div class="course-menu up-state">'+course[i]['Name']+'</div>'
+                str+='<div class="course-menu up-state"><p class="course-menu-name">'+course[i]['Name']+'</p></div>'
               }else{
                 console.log(course[i].Level)
                 str+='<div class="course-section">'+course[i]['Name']+'</div>'
               }
             }else if(course[i]['Children'].length==0 && course[i]['LessonList'].length>0){
               if(course[i].Level==1){    //只有两级
-                str+='<div class="course-menu up-state">'+course[i]['Name']+'</div>'
+                //str+='<div class="course-menu up-state">'+course[i]['Name']+'</div>'
+                str+='<div class="course-menu up-state"><p class="course-menu-name">'+course[i]['Name']+'</p><div class="lecture-notice"><p>'+'讲师：何凯文'+'</p><span class="course-notice">公告xxxxxxxxx</span></div></div>'
               }else{
-                str+='<div class="course-section">'+course[i]['Name']+'</div>';
+                str+='<div class="course-section"><div class="course-chapter">'+course[i]['Name']+'</div><div class="lecture-notice"><p>'+'讲师：何凯文'+'</p><span class="course-notice">公告xxxxxxxxx</span></div></div>';
               }
-              str+='<div class="lecture-notice"><p>'+'讲师：何凯文'+'</p><span class="course-notice">公告xxxxxxxxx</span></div>';
+              str+='<ul class="course-lesson">';
               for(var j=0;j<course[i]['LessonList'].length;j++){
-                str+='<ul class="course-lesson"><li><span class="lesson-name">'+course[i]['LessonList'][j].LessonName+'</span> <a class="course-audition" href="javascript:void(0)" data-src="https://p.bokecc.com/player?vid=30527D7BCD7C854F9C33DC5901307461&amp;siteid=46DFDA31005378B1&amp;autoStart=true&amp;width=&amp;height=&amp;playerid=8154E045DFBAE8D5&amp;playertype=1\">试听</a></li><li><span  class="lesson-name">2020考研专业院校规划讲座院校</span><p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p></li></ul>'  
+                //str+='<ul class="course-lesson">';
+                // str+='<li><p class="lesson-name"><span class="lesson-num">0'+j+'</span>'+course[i]['LessonList'][j].LessonName+'</p>';
+                // str+='<a class="course-audition" href="javascript:void(0)" data-src="https://p.bokecc.com/player?vid=30527D7BCD7C854F9C33DC5901307461&amp;siteid=46DFDA31005378B1&amp;autoStart=true&amp;width=&amp;height=&amp;playerid=8154E045DFBAE8D5&amp;playertype=1\">试听</a>';
+                // str+='</li>';
+                str+='<li><p  class="lesson-name"><span class="lesson-num">0'+(j+1)+'</span>'+course[i]['LessonList'][j].LessonName+'</p><p class="course-livetime"><span class="state-title">直播</span><span class="live-time-point">2019.09.23  20:00-22:00</span></p></li>';
+                //str+='</ul>'
               }
+              str+='</ul>'
             }
-
             createTree(course[i]["Children"]);
             str+='</li>'
           }

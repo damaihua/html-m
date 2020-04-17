@@ -685,7 +685,7 @@ body {
   border-top: 1px solid #f1f4fd;
   border-bottom: 1px solid #f1f4fd;
   font-size: .3rem;
-  color: #999;
+  color: #333;
   overflow: hidden;
 }
 
@@ -701,7 +701,8 @@ body {
 .nav-subject-swiper .swiper-slide span.current {
   color: #2e88fe;
   font-weight: bold;
-  font-size: .32rem;
+  background: url(../images/scrollBg.png) center 0.7rem no-repeat;
+  background-size: .4rem .04rem;
 }
 
 .fixed-top {
@@ -774,4 +775,8 @@ body {
 
 .searchHot-title h2 {
   font-size: .26rem;
+}
+
+.only-listen {
+  padding: .2rem 0 0;
 }

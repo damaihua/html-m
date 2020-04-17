@@ -374,6 +374,7 @@
 .course-tabNav .swiper-slide.current span {
   background: url(../images/scrollBg.png) bottom center no-repeat;
   background-size: .44rem .04rem;
+  color: #2e88fe;
 }
 
 .course-tabNav .swiper-slide span {

@@ -19,7 +19,7 @@ var bannerSwiper=new Swiper('.banner-swiper',{
 })
 //subject-swiper
 var subjectSwiper=new Swiper('.subject-swiper',{
-  //autoHeight: true
+  autoHeight: true,
   slidesPerView: 'auto',
   freeMode: true,
   scrollbar: {
@@ -43,12 +43,14 @@ var optionSwiper = new Swiper('.option-swiper',{
 
 
 //course-swiper
+var num=0
 var subjectSwiper=new Swiper('.course-tabNav',{
   slidesPerView: 'auto',
   freeMode: true,
-  noSwiping : true,
+  // noSwiping : true,
   
 })
+
 $('.public-course-mod .course-tabNav .swiper-slide').click(function(){
   var ind=$(this).index();
   console.log(ind)
